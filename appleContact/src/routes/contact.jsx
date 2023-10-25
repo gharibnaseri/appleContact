@@ -5,12 +5,12 @@ import { useLoaderData } from "react-router-dom";
 
 export async function loader({params}){
     const contact= await getContact(params.contactId)
-    return {contact,ali:'hasan'}
+    return {contact}
 }
 
 export default function Contact() {
-    const { contact,ali } = useLoaderData();
-    console.log(ali)
+    const { contact } = useLoaderData();
+    
     // const contact = {
     //     first: "Your",
     //     last: "Name",
